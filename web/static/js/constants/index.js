@@ -1,0 +1,24 @@
+import keyMirror from 'keyMirror';
+
+const Constants = keyMirror({
+  FETCH_USER_LIST_REQUEST: null,
+  FETCH_USER_LIST_SUCCESS: null,
+  FETCH_USER_LIST_FAILURE: null,  
+  FETCH_USER_DETAILS_REQUEST: null,
+  FETCH_USER_DETAILS_SUCCESS: null,
+  FETCH_USER_DETAILS_FAILURE: null,  
+  ADD_NEW_USER_REQUEST: null,
+  ADD_NEW_USER_FAILURE: null,
+  ADD_NEW_USER_SUCCESS: null,
+  UPDATE_USER_REQUEST: null,
+  UPDATE_USER_FAILURE: null,
+  UPDATE_USER_SUCCESS: null,
+  DELETE_USER_REQUEST: null,
+  DELETE_USER_FAILURE: null,
+  DELETE_USER_SUCCESS: null,
+  FETCH_FEED_LIST_REQUEST: null,
+  FETCH_FEED_LIST_SUCCESS: null,
+  FETCH_FEED_LIST_FAILURE: null,
+});
+
+export default Constants;
