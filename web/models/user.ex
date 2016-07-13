@@ -21,7 +21,7 @@ defmodule MovieFeeds.User do
   """
   def changeset(model, params \\ %{}) do
     model
-    |> cast(params, [:name, :username])
+    |> cast(params, [:name, :username,:user_type])
     |> validate_required([:name, :username])
     |> validate_length(:name, min: 4, max: 100)
     |> validate_length(:username, min: 4, max: 100)  
