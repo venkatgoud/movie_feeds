@@ -66,8 +66,7 @@ export function httpDelete(url) {
     method: 'delete',
     headers: buildHeaders(),
   })
-  .then(checkStatus)
-  .then(parseJSON);
+  .then(checkStatus);
 }
 
 export function renderErrorsFor(errors, ref) {

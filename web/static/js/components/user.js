@@ -6,8 +6,7 @@ export default class User extends React.Component {
 
 	constructor(props){
 		super(props)
-
-		// Initialise state here.		
+		 
 		this.state = {
 			name: props.name || '',
 			username: props.username || '',
@@ -64,56 +63,55 @@ export default class User extends React.Component {
 		})	
 	}
 
-	render() {	
-		console.log(this.state);
+	render() {			 
 		return (
 			<div className='container'>			
 		 	<Form horizontal>		 	 		 	
 			 	<FormGroup controlId="formName">
-			      <Col componentClass={ControlLabel} sm={2}>
-			        Name
-			      </Col>
-			      <Col sm={10}>
-			        <FormControl 
-			        	type="text" 
-			        	placeholder="name" 
-			        	required
-			        	value={this.state.name}
-			        	onChange={this.handleChange('name')}/>
-			      </Col>		       
+		      <Col componentClass={ControlLabel} sm={2}>
+		        Name
+		      </Col>
+		      <Col sm={10}>
+		        <FormControl 
+		        	type="text" 
+		        	placeholder="name" 
+		        	required
+		        	value={this.state.name}
+		        	onChange={this.handleChange('name')}/>
+		      </Col>		       
 				</FormGroup>
 
 				<FormGroup controlId="formUsername">		       
-			      <Col componentClass={ControlLabel} sm={2}>
-			        User name
-			      </Col>
-			      <Col sm={10}>
-			        <FormControl 
-			        	type="text" 
-			        	placeholder="username" 
-			        	required
-			        	value={this.state.username}
-			        	onChange={this.handleChange('username')}/>
-			      </Col>
+		      <Col componentClass={ControlLabel} sm={2}>
+		        User name
+		      </Col>
+		      <Col sm={10}>
+		        <FormControl 
+		        	type="text" 
+		        	placeholder="username" 
+		        	required
+		        	value={this.state.username}
+		        	onChange={this.handleChange('username')}/>
+		      </Col>
 				</FormGroup>
 
 				<FormGroup controlId="formPassword">
-			      <Col componentClass={ControlLabel} sm={2}>
-			        Password
-			      </Col>
-			      <Col sm={10}>
-			        <FormControl 
-			        	type="password" 
-			        	placeholder="Password"
-			        	required
-			        	value = {this.state.password} 
-			        	onChange={this.handleChange('password')}
-			        	/>
-			      </Col>
+		      <Col componentClass={ControlLabel} sm={2}>
+		        Password
+		      </Col>
+		      <Col sm={10}>
+		        <FormControl 
+		        	type="password" 
+		        	placeholder="Password"
+		        	required
+		        	value = {this.state.password} 
+		        	onChange={this.handleChange('password')}
+		        	/>
+		      </Col>
 			    </FormGroup>
 
 			    <FormGroup controlId="formUsertype">
-				  <Col componentClass={ControlLabel} sm={2}>
+				  	<Col componentClass={ControlLabel} sm={2}>
 			        Type
 			      </Col>
 			      <Col sm={10}>						       

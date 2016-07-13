@@ -1,10 +1,10 @@
-import Constants              from '../constants'; 
+import Constants                       from '../constants'; 
 import { httpGet, httpPost, httpPut }  from '../utils'; 
 
 const Actions = {
   createUser: (data) => {
         return dispatch => {
-        //Just in case any component wants to do something with this
+        //dispatch so UI might do something with this 
         dispatch({type: Constants.ADD_NEW_USER_REQUEST})
   
         httpPost('/api/users', {user: data})

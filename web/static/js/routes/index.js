@@ -11,12 +11,11 @@ export default function configRoutes(store) {
 	return (     
       <Route path="/" component={MainLayout}>
         <IndexRoute component={UserList} />
-        <Route path="/users" component={UserList}/>
-        <Route path="/users/add" component={AddUser} />
+        <Route path="/users"          component={UserList}/>
+        <Route path="/users/add"      component={AddUser} />
         <Route path="/users/edit/:id" component={EditUser} />         
-        <Route path="/feeds" component={FeedList} />
-        <Route path="/targets" component={TargetList} />
-        
+        <Route path="/feeds"          component={FeedList} />
+        <Route path="/targets"        component={TargetList} />        
       </Route>     
   );
 }

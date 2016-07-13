@@ -6,7 +6,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 export default class Header extends React.Component {
 	render() {
-	    return (
+		return (
 		  <Navbar>
 		    <Navbar.Header>
 		      <Navbar.Brand>
@@ -15,8 +15,7 @@ export default class Header extends React.Component {
 		      <Navbar.Toggle />
 		    </Navbar.Header>
 		    <Navbar.Collapse>
-		      <Nav>
-		      	
+		      <Nav>		      	
 		      	<LinkContainer to="/users">
 			      	<NavItem eventKey={1}>
 			        	<Glyphicon glyph="user" />Users

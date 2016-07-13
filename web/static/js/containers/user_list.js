@@ -69,7 +69,21 @@ class UserList extends React.Component {
     this.setState({showConfirmDelete: false})
   }  
 
-  render() {         
+  render() {
+    
+    var askConfirmDelete = this.state.showConfirmDelete
+
+        ? <ConfirmDelete 
+          title="Delete User"
+          body = "Are you sure you want to delete this user?"
+          closeBtnCaption = "Cancel"
+          okBtnCaption = "Ok" 
+          onOK={this.okDelete.bind(this)}
+          onCancel={this.cancelDelete.bind(this)}
+          showModal={true}                      
+        />
+        :null ;
+
     return (
       <div id="userlist">         
         <ButtonGroup bsClass="btn-group pull-right">
@@ -78,20 +92,7 @@ class UserList extends React.Component {
           <Button disabled={!this.state.isSelected} onClick={this.onEditUser.bind(this)}> <Glyphicon glyph="edit" /></Button> 
         </ButtonGroup>
          
-        {
-          this.state.showConfirmDelete ? 
-
-          <ConfirmDelete 
-            title="Delete User"
-            body = "Are you sure you want to delete this user?"
-            closeBtnCaption = "Cancel"
-            okBtnCaption = "Ok" 
-            onOK={this.okDelete.bind(this)}
-            onCancel={this.cancelDelete.bind(this)}
-            showModal={true}                      
-          />
-          :null
-        }
+        {askConfirmDelete}
 
         <BootstrapTable 
           data={this.props.users} 
