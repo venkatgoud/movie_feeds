@@ -1,10 +1,24 @@
 import React, { Component } from 'react';
 import { connect }      	from 'react-redux'; 
-import { AlertDismissable }	from '../components/alert_dismissable';
+import { Alert } 						from 'react-bootstrap';
 import UserActions    		from '../actions/userActions';
 import User 				from '../components/user'
 
 export default class EditUser extends Component {
+
+	constructor(props){
+		super(props)
+		
+		this.state = {
+			error: null,
+			name: '',
+			username: '',
+			password: '',
+			user_type: 'user',
+			enabled: true,
+			locked: false
+		}	
+	}
 
 	onSubmit = (user) => {
 		this.props.dispatch(UserActions.updateUser(this.props.routeParams.id, user))
@@ -20,9 +34,26 @@ export default class EditUser extends Component {
 		}		 
 	}
 
-	showAlert(){
-		if (this.props.error) {
-			<AlertDismissable text="Save failed: {props.error}"/>	
+	componentWillReceiveProps(nextProps){
+		this.setState({error: nextProps.error})		 
+	}
+
+	componentWillUnmount(){
+		this.setState({error: null})
+	}
+
+	displayChangeSetErrors = (error)=>{
+		return Object.getOwnPropertyNames(error).map(function(element){			 
+			return <p> {element + " " + error[element]} </p>			
+		})
+	}
+
+	showAlert = () => {		
+		if (this.state.error) {		
+			return <Alert bsStyle="danger"> 
+				<h4>Oops, something went wrong! Please check the errors below.</h4>
+				{this.displayChangeSetErrors(this.state.error)}
+			</Alert>				 			 
 		}	
 	}
 

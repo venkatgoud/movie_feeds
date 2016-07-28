@@ -11,7 +11,7 @@ export default function reducer(state = initialState, action = {}) {
 
     case Constants.ADD_NEW_USER_SUCCESS:
     case Constants.UPDATE_USER_SUCCESS:
-      return {...state, saving: false}
+      return {...state, saving: false, error: null}
 
     case Constants.ADD_NEW_USER_REQUEST:
     case Constants.UPDATE_USER_REQUEST:

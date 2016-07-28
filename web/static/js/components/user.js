@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import { Alert, Form, FormGroup, FormControl, Button, Col, Checkbox, ControlLabel} 
 	from 'react-bootstrap';
-
+//TODO - defaultChecked={task.done}
 export default class User extends React.Component {
 
 	constructor(props){
@@ -76,7 +76,7 @@ export default class User extends React.Component {
 		        	type="text" 
 		        	placeholder="name" 
 		        	required
-		        	value={this.state.name}
+		        	value={this.state.name}		        	 
 		        	onChange={this.handleChange('name')}/>
 		      </Col>		       
 				</FormGroup>

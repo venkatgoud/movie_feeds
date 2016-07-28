@@ -20,7 +20,7 @@
 
 // import socket from "./socket"
 
-// require('bootstrap/dist/css/bootstrap.css') 
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css'; 
 
 import React                    from 'react';
 import ReactDOM                 from 'react-dom';

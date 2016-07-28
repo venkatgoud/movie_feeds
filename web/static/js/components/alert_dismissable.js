@@ -19,7 +19,8 @@ export default class AlertDismissable extends Component {
 		if (this.state.alertVisible) {
 			return (
 				<Alert bsStyle="danger" onDismiss={this.handleAlertDismiss}>
-	        <h4>{this.props.text}</h4>                     		 
+	        <h4>{this.props.text}</h4>
+	        {this.props.children}                     		 
 	      </Alert> 
 			);
 		}	
